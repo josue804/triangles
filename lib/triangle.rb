@@ -15,4 +15,12 @@ class Triangle
        false
     end
   end
+
+  define_method(:type) do
+    if @side_one == @side_two && @side_two == @side_three
+      "Equilateral"
+    elsif @side_one == @side_two || @side_one == @side_three || @side_two == @side_three
+      "Isosceles"
+    end
+  end
 end
